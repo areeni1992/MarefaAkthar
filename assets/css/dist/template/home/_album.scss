@@ -1,0 +1,53 @@
+.album{
+  background: #fff;
+  .marke{
+    &::before{
+      background: rgba(yellow, .4);
+    }
+  }
+  .row{
+    margin-left: -1px;
+    margin-right: -1px;
+    [class*=col-] {
+    padding: 0px;
+    }
+    .img{
+      position: relative;
+      padding: 2px;
+      .overlay{
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(#000, .6);
+        color: #fff;
+        margin: 1px;
+        padding: 50px;
+        .icon{
+          position: relative;
+          display: inline-block;
+          width: 21px;
+          height: 17px;
+          border: 1px solid #fff;
+
+          &::before{
+            position: absolute;
+            content: "";
+            width: 21px;
+            height: 17px;
+            top: -6px;
+            right: -6px;
+            border: 1px solid #fff;
+
+          }
+        }
+        .read{
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

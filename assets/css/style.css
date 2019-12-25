@@ -1,0 +1,358 @@
+.item .text {
+  font-size: 16px;
+  font-weight: bold;
+}
+.item .text:hover {
+  color: #bb0055;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.marke {
+  position: relative;
+  display: inline-block;
+}
+.marke::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 8px;
+  background: rgba(0, 0, 255, 0.1);
+}
+
+.top-header .top-line {
+  height: 3px;
+  background-image: linear-gradient(to left, #bb0055, #0699cc);
+}
+.top-header .police a {
+  font-size: 14px;
+  font-weight: bold;
+}
+.top-header .social i {
+  font-size: 14px;
+}
+
+.header .search-input input {
+  height: 66px !important;
+  border: none;
+  padding: 20px;
+}
+.header .link {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.header .link a:hover {
+  color: #bb0055;
+}
+.header .search-icon {
+  width: 63px;
+  text-align: center;
+}
+.header .search-icon button {
+  background: none;
+  border: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 45;
+  background: #fff;
+  display: none;
+}
+.mobile-menu .social a {
+  font-size: 25px;
+}
+
+.home .row {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.home .row [class*=col-] {
+  padding: 1px;
+}
+.home .item .image {
+  position: relative;
+}
+.home .item .image span {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  color: #fff;
+  padding: 7px 15px;
+  background: #e32667;
+  border-radius: 5px;
+  font-size: 14px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .home .item .image span {
+    font-size: 10px;
+    padding: 3px;
+  }
+}
+.home .item .overlay {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 1px;
+  background-image: linear-gradient(to top, rgba(56, 127, 197, 0.5), rgba(255, 0, 0, 0));
+}
+.home .item .overlay .text {
+  font-size: 22px;
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .home .item .overlay .text {
+    font-size: 13px;
+  }
+}
+
+.join a {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.email {
+  background: #eee;
+}
+.email input {
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  text-indent: 10px;
+  font-size: 14px;
+}
+.email button {
+  background: #ff8351;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+
+.read .img {
+  width: 90px;
+  height: 60px;
+}
+.read .img img {
+  width: 90px;
+}
+
+.videopannel {
+  background: #222;
+}
+.videopannel .video-container {
+  position: relative;
+  height: 390px;
+}
+.videopannel .title {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+}
+.videopannel .title h4 {
+  font-size: 25px;
+}
+.videopannel .title p {
+  font-size: 18px;
+}
+.videopannel .video-player .embed-responsive {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 100%;
+  margin: 0px !important;
+  overflow: hidden;
+  height: 390px;
+}
+.videopannel .video-play {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.videopannel .video-play::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.2));
+}
+.videopannel .video-play .video-play-link {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  top: 50%;
+  right: 50%;
+  font-size: 45px;
+  transform: translate(50%, -50%);
+  z-index: 3;
+}
+.videopannel .head {
+  color: #fff;
+}
+.videopannel .videomenu {
+  counter-reset: item-num;
+  color: #fff;
+  height: calc(390px - 57px);
+  overflow-y: hidden;
+  background: #111;
+}
+.videopannel .videomenu .item {
+  border-bottom: 1px solid #000;
+}
+.videopannel .videomenu .item .video-play-link .num::before {
+  counter-increment: item-num;
+  content: counter(item-num);
+  color: #ccc;
+  text-align: center;
+  line-height: 40px;
+}
+.videopannel .videomenu .item .video-play-link .img {
+  width: 99px;
+}
+.videopannel .videomenu .item .video-play-link span {
+  color: #ccc;
+  font-size: 13px;
+}
+
+.world-news {
+  background: #fff;
+}
+.world-news .item .img {
+  width: 350px;
+  height: 185px;
+}
+.world-news .item .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.technology {
+  background: #fff;
+}
+.technology .marke::before {
+  background: rgba(3, 169, 244, 0.36);
+}
+.technology .item .img {
+  width: 350px;
+  height: 185px;
+}
+.technology .item .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.health {
+  background: #fff;
+}
+.health .marke::before {
+  background: rgba(3, 169, 244, 0.36);
+}
+.health .item .img {
+  width: 350px;
+  height: 185px;
+}
+.health .item .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.calm {
+  background: #fff;
+}
+.calm .marke::before {
+  background: rgba(3, 169, 244, 0.36);
+}
+.calm .item .img {
+  width: 350px;
+  height: 185px;
+}
+.calm .item .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.album {
+  background: #fff;
+}
+.album .marke::before {
+  background: rgba(255, 255, 0, 0.4);
+}
+.album .row {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.album .row [class*=col-] {
+  padding: 0px;
+}
+.album .row .img {
+  position: relative;
+  padding: 2px;
+}
+.album .row .img .overlay {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  margin: 1px;
+  padding: 50px;
+}
+.album .row .img .overlay .icon {
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 17px;
+  border: 1px solid #fff;
+}
+.album .row .img .overlay .icon::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 17px;
+  top: -6px;
+  right: -6px;
+  border: 1px solid #fff;
+}
+.album .row .img .overlay .read {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */
